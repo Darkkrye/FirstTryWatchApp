@@ -1,0 +1,21 @@
+{
+    "aps": {
+        "alert": {
+            "body": "Température en hausse !",
+            "title": "Optional title"
+        },
+        "category": "myCategory"
+    },
+    
+    "WatchKit Simulator Actions": [
+        {
+            "title": "Voir la station",
+            "identifier": "stationButtonAction"
+        }
+    ],
+    
+    "station": {
+        "id": 2,
+        "temperature_increase": 2
+    }
+}

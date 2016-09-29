@@ -14,9 +14,37 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "30601D0D1D9D10D900163ED8"
+               BuildableName = "WatchKitApp.app"
+               BlueprintName = "WatchKitApp"
+               ReferencedContainer = "container:WatchKitComplicationTest.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "30601CF61D9D108300163ED8"
                BuildableName = "WatchKitComplicationTest.app"
                BlueprintName = "WatchKitComplicationTest"
+               ReferencedContainer = "container:WatchKitComplicationTest.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "30601D191D9D10D900163ED8"
+               BuildableName = "WatchKitApp Extension.appex"
+               BlueprintName = "WatchKitApp Extension"
                ReferencedContainer = "container:WatchKitComplicationTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +60,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "30601CF61D9D108300163ED8"
-            BuildableName = "WatchKitComplicationTest.app"
-            BlueprintName = "WatchKitComplicationTest"
+            BlueprintIdentifier = "30601D0D1D9D10D900163ED8"
+            BuildableName = "WatchKitApp.app"
+            BlueprintName = "WatchKitApp"
             ReferencedContainer = "container:WatchKitComplicationTest.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -51,7 +79,7 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
-      launchAutomaticallySubstyle = "4"
+      launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "WatchKitApp Extension/PushNotificationPayload.apns">
       <RemoteRunnable
          runnableDebuggingMode = "2"
@@ -82,17 +110,30 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      debugDocumentVersioning = "YES"
+      launchAutomaticallySubstyle = "8"
+      notificationPayloadFile = "WatchKitApp Extension/PushNotificationPayload.apns">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.carousel"
+         RemotePath = "/WatchKitComplicationTest">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "30601CF61D9D108300163ED8"
-            BuildableName = "WatchKitComplicationTest.app"
-            BlueprintName = "WatchKitComplicationTest"
+            BlueprintIdentifier = "30601D0D1D9D10D900163ED8"
+            BuildableName = "WatchKitApp.app"
+            BlueprintName = "WatchKitApp"
             ReferencedContainer = "container:WatchKitComplicationTest.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "30601D0D1D9D10D900163ED8"
+            BuildableName = "WatchKitApp.app"
+            BlueprintName = "WatchKitApp"
+            ReferencedContainer = "container:WatchKitComplicationTest.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

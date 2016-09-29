@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import iPhoneSkiKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

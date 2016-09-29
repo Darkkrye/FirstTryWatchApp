@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchKitApp" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="1E4-Kt-juW">
+                            <items>
+                                <tableRow identifier="SkiResortTableRow" id="LPK-kn-ZF6" customClass="SkiResortTableRowController" customModule="WatchKitApp_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="B7A-ly-V5f">
+                                        <items>
+                                            <label width="136" height="57.5" alignment="left" text="Ville" textAlignment="center" id="ugv-VE-fJE"/>
+                                        </items>
+                                        <connections>
+                                            <segue destination="GwM-zO-wFR" kind="push" id="223-op-S9Q"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="ugv-VE-fJE" id="H7u-dV-xyU"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="mainTable" destination="1E4-Kt-juW" id="zfk-ng-Sv4"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="KDM-yn-8Z5">
+            <objects>
+                <glanceController id="XjV-9e-thu" customClass="GlanceController" customModule="WatchKitApp_Extension">
+                    <items>
+                        <group alignment="left" layout="vertical" id="Y1e-cl-fkB">
+                            <items>
+                                <dateLabel width="136" height="41.5" alignment="left" textAlignment="center" format="H:mm" id="1vt-kQ-d7U">
+                                    <fontDescription key="font" type="system" pointSize="40"/>
+                                </dateLabel>
+                                <separator width="120" alignment="left" id="yfm-L8-zdz"/>
+                            </items>
+                        </group>
+                        <group alignment="left" layout="vertical" id="f5E-Ck-AL4">
+                            <items>
+                                <imageView height="44" alignment="left" id="410-K7-A1A"/>
+                                <group width="1" height="74.5" alignment="left" id="NyA-2K-8nO">
+                                    <items>
+                                        <label width="67" height="70.5" alignment="left" text="25°C" id="tWz-3K-I0l">
+                                            <fontDescription key="font" type="boldSystem" pointSize="33"/>
+                                        </label>
+                                        <group width="92" height="65.5" alignment="left" layout="vertical" id="3di-ar-iHr">
+                                            <items>
+                                                <label width="99.5" height="36.5" alignment="left" text="Ville" numberOfLines="2" id="jIr-gm-R3U">
+                                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                                </label>
+                                                <dateLabel width="128" height="33.5" alignment="left" id="hrI-2F-9GY">
+                                                    <dateFormatterStyle key="dateStyle" short="YES"/>
+                                                </dateLabel>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="dateLabel" destination="hrI-2F-9GY" id="W4v-SR-qFx"/>
+                        <outlet property="image" destination="410-K7-A1A" id="7OS-XP-it8"/>
+                        <outlet property="temperatureLabel" destination="tWz-3K-I0l" id="OkS-WI-US1"/>
+                        <outlet property="timeLabel" destination="1vt-kQ-d7U" id="UCV-RQ-3vq"/>
+                        <outlet property="titleLabel" destination="jIr-gm-R3U" id="HDg-2w-vEa"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="220" y="647"/>
+        </scene>
+        <!--DetailInterface-->
+        <scene sceneID="aLh-9l-c1L">
+            <objects>
+                <controller identifier="DetailInterface" id="GwM-zO-wFR" customClass="DetailInterfaceController" customModule="WatchKitApp_Extension">
+                    <items>
+                        <imageView height="104" alignment="left" id="Rbd-k6-0f7"/>
+                        <group width="1" alignment="left" id="2W0-YV-RzM">
+                            <items>
+                                <label width="67" height="63.5" alignment="left" text="25°C" id="Jwo-Kl-6wJ">
+                                    <fontDescription key="font" type="boldSystem" pointSize="33"/>
+                                </label>
+                                <group width="92" alignment="left" layout="vertical" id="yPd-wB-ldw">
+                                    <items>
+                                        <label width="99.5" height="38.5" alignment="left" text="Ville" numberOfLines="2" id="OYz-1d-74L"/>
+                                        <dateLabel width="128" alignment="left" id="NYk-HJ-dNC">
+                                            <dateFormatterStyle key="dateStyle" short="YES"/>
+                                        </dateLabel>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="dateLabel" destination="NYk-HJ-dNC" id="law-Bd-Pbz"/>
+                        <outlet property="nameLabel" destination="OYz-1d-74L" id="Wyl-Ua-2sU"/>
+                        <outlet property="photoImageView" destination="Rbd-k6-0f7" id="wS1-Za-wj5"/>
+                        <outlet property="temperatureLabel" destination="Jwo-Kl-6wJ" id="i5y-6r-aFR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="354.5"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label width="136" height="45.5" alignment="left" text="Alert Label" textAlignment="center" numberOfLines="2" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="997"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="WatchKitApp" customModuleProvider="target">
+                    <items>
+                        <label width="136" height="45.5" alignment="left" text="Ville sur plusieurs lignes" numberOfLines="2" id="KU7-qE-eGr"/>
+                        <label width="136" height="40" alignment="left" text="Temperature" id="48C-2R-MCO"/>
+                    </items>
+                    <connections>
+                        <outlet property="temperatureLabel" destination="48C-2R-MCO" id="toU-h1-St8"/>
+                        <outlet property="titleLabel" destination="KU7-qE-eGr" id="4PE-Wa-0rC"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="997"/>
+        </scene>
+    </scenes>
+</document>

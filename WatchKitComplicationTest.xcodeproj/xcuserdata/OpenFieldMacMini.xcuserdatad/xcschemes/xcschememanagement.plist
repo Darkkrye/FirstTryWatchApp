@@ -4,6 +4,26 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>WatchKitApp (Complication).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>WatchKitApp (Notification).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>WatchKitApp.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>WatchKitAppGlance.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>WatchKitComplicationTest.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +33,26 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>30601CF61D9D108300163ED8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>30601D0D1D9D10D900163ED8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>30601D3B1D9D14C500163ED8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>30601D5E1D9D1D3700163ED8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>30601D781D9D1DA300163ED8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
