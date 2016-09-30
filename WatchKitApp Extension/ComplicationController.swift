@@ -11,9 +11,12 @@ import ClockKit
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
+    private var skiResort: SkiResortDataSource!
+    
     // MARK: - Timeline Configuration
     
     func getSupportedTimeTravelDirectionsForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTimeTravelDirections) -> Void) {
+        self.skiResort = SkiResortDataSource()
         handler(.Forward)
     }
     
@@ -46,10 +49,27 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             
             handler(entry)
         } else if complication.family == .ModularSmall {
+            let station = skiResort[3]
+            var fill: Float = (((100 * Float(station.temperature)) / 50) / 100) / 2
+            
+            if station.temperature > 0 {
+                fill = fill + 0.5
+            } else {
+                fill = -0.5 - fill
+                fill = -fill
+            }
+            
+            let stringVersion = String(format: "%.2f", fill)
+            print(stringVersion)
+            
             let template = CLKComplicationTemplateModularSmallRingText()
-            template.fillFraction = 0.4 // Taux de remplissage de la barre de progression (entre 0 et 1)
+            template.fillFraction = Float(stringVersion)! // Taux de remplissage de la barre de progression (entre 0 et 1)
             template.ringStyle = .Open // Si le cercle est fermé ou non
-            template.textProvider = CLKSimpleTextProvider(text: "-10°") // Pas plus de 3 chiffres
+            template.textProvider = CLKSimpleTextProvider(text: "\(station.temperature)°") // Pas plus de 3 chiffres
+            
+            if station.temperature < -19 {
+                template.textProvider = CLKSimpleTextProvider(text: "\(station.temperature)")
+            }
             
             let entry = CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: template)
             
